@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    let exercises = ["Lower Body", "Upper Body", "Full Body"]
+    //let exercises = ["Lower Body", "Upper Body", "Full Body"]
     var body: some View {
         NavigationView {
         ZStack {
@@ -17,14 +17,19 @@ struct ContentView: View {
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
                 VStack {
-                    Text("Select One")
-                    .font(.title)
-                    .padding(50)
-                    ForEach(exercises[0..<exercises.count], id: \.self) { exercise in
-                        NavigationLink (
-                            destination: LowerBody(),
-                            label: { CardView(content: exercise) })
-                    }
+//                    Text("Select ")
+//                    .font(.title)
+//                    .padding(50)
+                    NavigationLink (
+                        destination: LowerBody(),
+                        label: { CardView(content: "Lower Body") })
+                    NavigationLink (
+                        destination: UpperBody(),
+                        label: { CardView(content: "Upper Body") })
+                    NavigationLink (
+                        destination: FullBody(),
+                        label: { CardView(content: "Full Body") })
+                       
                 }
             }
         }
@@ -42,6 +47,7 @@ struct CardView: View {
         ZStack {
             RoundedRectangle(cornerRadius: 20)
                 .stroke()
+                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
             Text(content)
                 .frame(maxWidth: .infinity)
         } .frame(height: 50.0)
