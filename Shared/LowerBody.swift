@@ -74,7 +74,7 @@ private var lowerMusclesGroup = [
     LowerMuscles(name: "Quadriceps"),
     LowerMuscles(name: "Adductors"),
     LowerMuscles(name: "Hamstrings"),
-    LowerMuscles(name: "Glutes"),
+    LowerMuscles(name: "Glutess"),
 ]
 
 
