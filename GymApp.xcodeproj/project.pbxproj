@@ -19,6 +19,10 @@
 		70AFE06728631E8D00DA477E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AFE03D28631E8B00DA477E /* ContentView.swift */; };
 		70AFE06828631E8D00DA477E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70AFE03E28631E8D00DA477E /* Assets.xcassets */; };
 		70AFE06928631E8D00DA477E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70AFE03E28631E8D00DA477E /* Assets.xcassets */; };
+		70C0ADA92871A16B005A676F /* MuscleExercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C0ADA82871A16B005A676F /* MuscleExercises.swift */; };
+		70C0ADAA2871A16B005A676F /* MuscleExercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C0ADA82871A16B005A676F /* MuscleExercises.swift */; };
+		70C0ADAF2871A898005A676F /* viewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C0ADAE2871A898005A676F /* viewModel.swift */; };
+		70C0ADB02871A898005A676F /* viewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C0ADAE2871A898005A676F /* viewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +56,8 @@
 		70AFE05C28631E8D00DA477E /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70AFE06028631E8D00DA477E /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		70AFE06228631E8D00DA477E /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		70C0ADA82871A16B005A676F /* MuscleExercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleExercises.swift; sourceTree = "<group>"; };
+		70C0ADAE2871A898005A676F /* viewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,7 @@
 		70AFE03628631E8B00DA477E = {
 			isa = PBXGroup;
 			children = (
+				70C0ADAE2871A898005A676F /* viewModel.swift */,
 				70AFE03B28631E8B00DA477E /* Shared */,
 				70AFE04A28631E8D00DA477E /* macOS */,
 				70AFE05328631E8D00DA477E /* Tests iOS */,
@@ -103,6 +110,7 @@
 				70AFE03C28631E8B00DA477E /* GymAppApp.swift */,
 				70AFE03D28631E8B00DA477E /* ContentView.swift */,
 				707E6D2A2869B589003F1D24 /* LowerBody.swift */,
+				70C0ADA82871A16B005A676F /* MuscleExercises.swift */,
 				70AFE03E28631E8D00DA477E /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -303,8 +311,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70C0ADA92871A16B005A676F /* MuscleExercises.swift in Sources */,
 				70AFE06628631E8D00DA477E /* ContentView.swift in Sources */,
 				707E6D2B2869B589003F1D24 /* LowerBody.swift in Sources */,
+				70C0ADAF2871A898005A676F /* viewModel.swift in Sources */,
 				70AFE06428631E8D00DA477E /* GymAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,8 +323,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70C0ADAA2871A16B005A676F /* MuscleExercises.swift in Sources */,
 				70AFE06728631E8D00DA477E /* ContentView.swift in Sources */,
 				707E6D2C2869B589003F1D24 /* LowerBody.swift in Sources */,
+				70C0ADB02871A898005A676F /* viewModel.swift in Sources */,
 				70AFE06528631E8D00DA477E /* GymAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
