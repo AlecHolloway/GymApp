@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct GymAppApp: App {
+    let MuscleTypeList = MuscleExercises()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(viewModel: MuscleTypeList)
         }
     }
 }

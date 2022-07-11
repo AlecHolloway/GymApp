@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    //let exercises = ["Lower Body", "Upper Body", "Full Body"]
+    let viewModel: MuscleExercises
+    
     var body: some View {
         NavigationView {
         ZStack {
@@ -17,19 +18,9 @@ struct ContentView: View {
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
                 VStack {
-//                    Text("Select ")
-//                    .font(.title)
-//                    .padding(50)
-                    NavigationLink (
-                        destination: LowerBody(),
-                        label: { CardView(content: "Lower Body") })
-                    NavigationLink (
-                        destination: UpperBody(),
-                        label: { CardView(content: "Upper Body") })
-                    NavigationLink (
-                        destination: FullBody(),
-                        label: { CardView(content: "Full Body") })
-                       
+                    ForEach(viewModel.MuscleGroups) {muscle in
+                        CardView(card: muscle)
+                    }
                 }
             }
         }
@@ -37,19 +28,21 @@ struct ContentView: View {
 }
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        let MuscleTypeList = MuscleExercises()
+        ContentView(viewModel: MuscleTypeList)
     }
 }
 
 struct CardView: View {
-    var content: String
+    let card: FullBody.MuscleGroup
+    
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 20)
-                .stroke()
-                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-            Text(content)
-                .frame(maxWidth: .infinity)
+           RoundedRectangle(cornerRadius: 20)
+             .stroke()
+             .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+            Text(card.name)
+               .frame(maxWidth: .infinity)
         } .frame(height: 50.0)
     }
 }

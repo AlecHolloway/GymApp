@@ -8,6 +8,13 @@
 import SwiftUI
 
 class MuscleExercises {
-    private var model = FullBody()
+    static let MuscleGroupList: [String] = ["Arms", "Shoulders", "Chest", "Back", "Legs", "Buttocks", "Abdomen"]
     
+    //create the model
+    private var model = FullBody(MuscleGroupList: MuscleGroupList)
+   
+    
+    var MuscleGroups: Array<FullBody.MuscleGroup> {
+        return model.MuscleStructs
+    }
 }
