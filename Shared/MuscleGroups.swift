@@ -40,6 +40,7 @@ import Foundation
 
 struct FullBody {
     private(set) var MuscleStructs : Array<MuscleGroup>
+    //private(set) var FullBodyExercises: []
     
     
     init(MuscleGroupList: [String]) {
@@ -54,7 +55,8 @@ struct FullBody {
     }
     
     struct MuscleGroup: Identifiable {
-        var name: String
+        let name: String
+       // var exercises: [String]
         var id: Int
         //var exercises: String
     }
