@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class MuscleExercises {
+class MuscleExercises: ObservableObject {
     
     static let MuscleGroupsAndExercises:  [String: [String]] =
     ["Arm":
@@ -36,7 +36,7 @@ class MuscleExercises {
     
     
     //create the model
-    private var model = FullBody(MuscleAndExercises: MuscleGroupsAndExercises)
+   @Published private var model = FullBody(MuscleAndExercises: MuscleGroupsAndExercises)
    
     
     var MuscleGroups: Array<FullBody.MuscleGroup> {

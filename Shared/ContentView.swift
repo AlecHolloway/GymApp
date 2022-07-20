@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    let viewModel: MuscleExercises
+   @ObservedObject var viewModel: MuscleExercises
     
     var body: some View {
         NavigationView {
@@ -19,17 +19,11 @@ struct ContentView: View {
                     .edgesIgnoringSafeArea(.all)
                     VStack {
                         ForEach(viewModel.MuscleGroups) { muscle in
-                            CardView(card: muscle)
+                            NavigationLink(destination: ExerciseView(musclegroups: muscle), label: {CardView(card: muscle)})
                     }
                 }
             }
         }
-    }
-}
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        let MuscleTypeList = MuscleExercises()
-        ContentView(viewModel: MuscleTypeList)
     }
 }
 
@@ -41,9 +35,36 @@ struct CardView: View {
           let shape = RoundedRectangle(cornerRadius: 20)
           shape.fill().foregroundColor(.white)
           shape.strokeBorder(lineWidth: 3)
-           Text(card.name)
-              // .frame(maxWidth: .infinity)
+          Text(card.name)
         } .frame(height: 50.0)
     }
 }
 
+struct ExerciseView: View {
+    let musclegroups: FullBody.MuscleGroup
+    
+    var body: some View {
+        ZStack {
+          let shape = RoundedRectangle(cornerRadius: 20)
+          shape.fill().foregroundColor(.white)
+          shape.strokeBorder(lineWidth: 3)
+            //Text(musclegroups.exercises[0])
+           
+        } .frame(height: 50.0)
+    }
+}
+
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        let MuscleTypeList = MuscleExercises()
+        ContentView(viewModel: MuscleTypeList)
+    }
+}
+
+struct Exercise_Previews: PreviewProvider {
+    static var previews: some View {
+        let MuscleTypeList = MuscleExercises()
+        ContentView(viewModel: MuscleTypeList)
+    }
+}

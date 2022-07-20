@@ -21,11 +21,16 @@ struct FullBody {
             MuscleStructs.append(MuscleGroup(name: key, exercises: value, id: id_counter))
             id_counter+=1
         }
+        
     }
     
     struct MuscleGroup: Identifiable {
        let name: String
-       var exercises: [String]
+        var exercises: [String]
        var id: Int
     }
 }
+
+//struct exercises {
+//    let exercises: [String]
+//}
