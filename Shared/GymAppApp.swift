@@ -12,7 +12,8 @@ struct GymAppApp: App {
     let MuscleTypeList = MuscleExercises()
     var body: some Scene {
         WindowGroup {
-            ContentView(viewModel: MuscleTypeList)
+            //ContentView(viewModel: MuscleTypeList)
+            LogInView(viewModel: MuscleTypeList)
         }
     }
 }
